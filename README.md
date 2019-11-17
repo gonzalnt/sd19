@@ -4,6 +4,13 @@ FIXME
 
 ## Getting Started
 
+### Installation
+
+1. Install MariaDB on your local machine.
+2. Run script.sql
+
+### Running application
+
 1. Start the application: `lein run`
 2. Go to [localhost:8080](http://localhost:8080/) to see: `Hello World!`
 3. Read your app's source code at src/sd19/service.clj. Explore the docs of functions
@@ -24,22 +31,6 @@ To learn more about configuring Logback, read its [documentation](http://logback
 2. Start your service in dev-mode: `(def dev-serv (run-dev))`
 3. Connect your editor to the running REPL session.
    Re-evaluated code will be seen immediately in the service.
-
-### [Docker](https://www.docker.com/) container support
-
-1. Configure your service to accept incoming connections (edit service.clj and add  ::http/host "0.0.0.0" )
-2. Build an uberjar of your service: `lein uberjar`
-3. Build a Docker image: `sudo docker build -t sd19 .`
-4. Run your Docker image: `docker run -p 8080:8080 sd19`
-
-### [OSv](http://osv.io/) unikernel support with [Capstan](http://osv.io/capstan/)
-
-1. Build and run your image: `capstan run -f "8080:8080"`
-
-Once the image it built, it's cached.  To delete the image and build a new one:
-
-1. `capstan rmi sd19; capstan build`
-
 
 ## Links
 * [Other Pedestal examples](http://pedestal.io/samples)
